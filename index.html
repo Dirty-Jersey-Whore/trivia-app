@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Game Header -->
+        <header>
+            <h1>🎯 Trivia Game</h1>
+            <div class="score-board">
+                <span>Score: <span id="score">0</span></span>
+                <span>Question: <span id="question-number">1</span>/<span id="total-questions">5</span></span>
+            </div>
+        </header>
+
+        <!-- Category Selection (shows at start) -->
+        <div id="category-screen" class="screen active">
+            <h2>Select a Category</h2>
+            <div id="category-list"></div>
+        </div>
+
+        <!-- Quiz Screen (hidden at start) -->
+        <div id="quiz-screen" class="screen">
+            <div class="question-container">
+                <h2 id="question-text"></h2>
+                <div id="answer-options"></div>
+                <button id="submit-btn" class="btn-primary">Submit Answer</button>
+                <button id="next-btn" class="btn-primary" style="display: none;">Next Question</button>
+            </div>
+        </div>
+
+        <!-- Results Screen (hidden at start) -->
+        <div id="results-screen" class="screen">
+            <h2>Quiz Complete! 🎉</h2>
+            <div class="results-container">
+                <p class="final-score">Your Score: <span id="final-score">0</span>/<span id="final-total">5</span></p>
+                <p class="percentage">Percentage: <span id="percentage">0</span>%</p>
+                <button id="restart-btn" class="btn-primary">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

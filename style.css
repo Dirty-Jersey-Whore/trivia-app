@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 100%;
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.screen {
+    display: none;
+    padding: 40px;
+}
+
+.screen.active {
+    display: block;
+}
+
+/* Category Selection */
+#category-screen h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+#category-list {
+    display: grid;
+    gap: 20px;
+}
+
+.category-card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.category-card h3 {
+    color: #2c3e50;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    color: #7f8c8d;
+    font-size: 1.1em;
+}
+
+/* Quiz Screen */
+.question-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#question-text {
+    color: #2c3e50;
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+#answer-options {
+    display: grid;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.answer-option {
+    background: #f5f7fa;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+    font-size: 1.1em;
+}
+
+.answer-option:hover {
+    background: #e8eaf0;
+    transform: translateX(5px);
+}
+
+.answer-option.selected {
+    background: #667eea;
+    color: white;
+    border-color: #764ba2;
+}
+
+.answer-option.correct {
+    background: #2ecc71;
+    color: white;
+    border-color: #27ae60;
+}
+
+.answer-option.incorrect {
+    background: #e74c3c;
+    color: white;
+    border-color: #c0392b;
+}
+
+.answer-option.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Short Answer Input */
+#short-answer-input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    border: 3px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-family: inherit;
+}
+
+#short-answer-input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.6);
+}
+
+.btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Results Screen */
+#results-screen h2 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.results-container {
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.final-score {
+    font-size: 3em;
+    color: #2ecc71;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.percentage {
+    font-size: 2em;
+    color: #667eea;
+    margin-bottom: 40px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+    
+    #question-text {
+        font-size: 1.4em;
+    }
+    
+    .score-board {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .final-score {
+        font-size: 2em;
+    }
+}
