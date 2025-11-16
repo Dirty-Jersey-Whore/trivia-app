@@ -1,0 +1,50 @@
+{
+  "categories": [
+    {
+      "id": "state-capitals",
+      "name": "State Capitals",
+      "description": "Test your knowledge of U.S. state capitals",
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the capital of Texas?",
+          "type": "multiple_choice",
+          "options": ["Houston", "Austin", "Dallas", "San Antonio"],
+          "correct_answer": "Austin",
+          "difficulty": "easy"
+        },
+        {
+          "id": 2,
+          "question": "What is the capital of California?",
+          "type": "multiple_choice",
+          "options": ["Los Angeles", "San Francisco", "Sacramento", "San Diego"],
+          "correct_answer": "Sacramento",
+          "difficulty": "easy"
+        },
+        {
+          "id": 3,
+          "question": "What is the capital of New York?",
+          "type": "multiple_choice",
+          "options": ["New York City", "Buffalo", "Albany", "Rochester"],
+          "correct_answer": "Albany",
+          "difficulty": "medium"
+        },
+        {
+          "id": 4,
+          "question": "What is the capital of Florida?",
+          "type": "short_answer",
+          "correct_answer": "Tallahassee",
+          "difficulty": "medium"
+        },
+        {
+          "id": 5,
+          "question": "What is the capital of Illinois?",
+          "type": "multiple_choice",
+          "options": ["Chicago", "Springfield", "Peoria", "Naperville"],
+          "correct_answer": "Springfield",
+          "difficulty": "medium"
+        }
+      ]
+    }
+  ]
+}
