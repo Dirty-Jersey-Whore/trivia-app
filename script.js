@@ -230,3 +230,28 @@ restartBtn.addEventListener('click', () => {
 
 // Initialize game on page load
 loadTriviaData();
+// Return home button with confirmation
+document.addEventListener('DOMContentLoaded', () => {
+    const homeBtn = document.getElementById('home-btn');
+    
+    if (homeBtn) {
+        homeBtn.addEventListener('click', () => {
+            const confirmExit = confirm('Are you sure you want to quit this game? Your progress will be lost.');
+            
+            if (confirmExit) {
+                // Reset game state
+                currentCategory = null;
+                currentQuestionIndex = 0;
+                score = 0;
+                selectedAnswer = null;
+                
+                // Return to category screen
+                quizScreen.classList.remove('active');
+                categoryScreen.classList.add('active');
+                
+                // Reset displays
+                scoreDisplay.textContent = '0';
+            }
+        });
+    }
+});
