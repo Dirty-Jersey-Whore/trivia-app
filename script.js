@@ -18,13 +18,27 @@ const restartBtn = document.getElementById('restart-btn');
 const scoreDisplay = document.getElementById('score');
 const questionNumber = document.getElementById('question-number');
 const totalQuestions = document.getElementById('total-questions');
+// Shuffle array function (Fisher-Yates algorithm)
+function shuffleArray(array) {
+    const shuffled = [...array]; // Create a copy
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
 
 // Load categories list from categories.json
 async function loadCategories() {
     try {
         const response = await fetch('data/categories.json');
         categoriesList = await response.json();
-        displayCategories();
+        
+        // Check if there's no URL parameter before displaying
+        const urlParams = new URLSearchParams(window.location.search);
+        if (!urlParams.get('category')) {
+            displayCategories();
+        }
     } catch (error) {
         console.error('Error loading categories:', error);
         alert('Failed to load trivia categories. Please try again.');
@@ -53,13 +67,13 @@ async function loadCategoryQuestions(category) {
         const response = await fetch(category.file);
         const data = await response.json();
         
-        // Create category object with loaded questions
-        currentCategory = {
-            id: category.id,
-            name: category.name,
-            description: category.description,
-            questions: data.questions
-        };
+        // Create category object with shuffled questions
+		currentCategory = {
+    		id: category.id,
+    		name: category.name,
+    		description: category.description,
+    		questions: shuffleArray(data.questions)
+	};
         
         startQuiz();
     } catch (error) {
@@ -274,5 +288,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Check for category parameter in URL and auto-load
+async function initializeGame() {
+    await loadCategories();
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryParam = urlParams.get('category');
+    
+    if (categoryParam) {
+        if (categoryParam === 'random') {
+            // Pick random category
+            const randomIndex = Math.floor(Math.random() * categoriesList.categories.length);
+            const randomCategory = categoriesList.categories[randomIndex];
+            loadCategoryQuestions(randomCategory);
+        } else {
+            // Load specific category
+            const category = categoriesList.categories.find(cat => cat.id === categoryParam);
+            if (category) {
+                loadCategoryQuestions(category);
+            } else {
+                // Category not found, show selection screen
+                displayCategories();
+            }
+        }
+    } else {
+        // No parameter, show category selection
+        displayCategories();
+    }
+}
+
 // Initialize game on page load
-loadCategories();
+initializeGame();
