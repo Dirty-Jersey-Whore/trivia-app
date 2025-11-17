@@ -1,0 +1,18 @@
+{
+  "categories": [
+    {
+      "id": "state-capitals",
+      "name": "State Capitals",
+      "description": "Test your knowledge of U.S. state capitals",
+      "icon": "🏛️",
+      "file": "data/state-capitals.json"
+    },
+    {
+      "id": "constitution-amendments",
+      "name": "U.S. Constitution Amendments",
+      "description": "Test your knowledge of Constitutional Amendments",
+      "icon": "📜",
+      "file": "data/constitution-amendments.json"
+    }
+  ]
+}

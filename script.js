@@ -1,5 +1,5 @@
 // Game State
-let triviaData = null;
+let categoriesList = null;
 let currentCategory = null;
 let currentQuestionIndex = 0;
 let score = 0;
@@ -19,15 +19,15 @@ const scoreDisplay = document.getElementById('score');
 const questionNumber = document.getElementById('question-number');
 const totalQuestions = document.getElementById('total-questions');
 
-// Load trivia data from JSON
-async function loadTriviaData() {
+// Load categories list from categories.json
+async function loadCategories() {
     try {
-        const response = await fetch('data/questions.json');
-        triviaData = await response.json();
+        const response = await fetch('data/categories.json');
+        categoriesList = await response.json();
         displayCategories();
     } catch (error) {
-        console.error('Error loading trivia data:', error);
-        alert('Failed to load trivia questions. Please try again.');
+        console.error('Error loading categories:', error);
+        alert('Failed to load trivia categories. Please try again.');
     }
 }
 
@@ -35,27 +35,47 @@ async function loadTriviaData() {
 function displayCategories() {
     categoryList.innerHTML = '';
     
-    triviaData.categories.forEach(category => {
+    categoriesList.categories.forEach(category => {
         const categoryCard = document.createElement('div');
         categoryCard.className = 'category-card';
         categoryCard.innerHTML = `
             <h3>${category.name}</h3>
             <p>${category.description}</p>
         `;
-        categoryCard.addEventListener('click', () => startQuiz(category));
+        categoryCard.addEventListener('click', () => loadCategoryQuestions(category));
         categoryList.appendChild(categoryCard);
     });
 }
 
-// Start quiz with selected category
-function startQuiz(category) {
-    currentCategory = category;
+// Load questions for selected category
+async function loadCategoryQuestions(category) {
+    try {
+        const response = await fetch(category.file);
+        const data = await response.json();
+        
+        // Create category object with loaded questions
+        currentCategory = {
+            id: category.id,
+            name: category.name,
+            description: category.description,
+            questions: data.questions
+        };
+        
+        startQuiz();
+    } catch (error) {
+        console.error('Error loading category questions:', error);
+        alert('Failed to load questions for this category. Please try again.');
+    }
+}
+
+// Start quiz with loaded category
+function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
     
     // Update UI
     scoreDisplay.textContent = score;
-    totalQuestions.textContent = category.questions.length;
+    totalQuestions.textContent = currentCategory.questions.length;
     
     // Switch screens
     categoryScreen.classList.remove('active');
@@ -228,8 +248,6 @@ restartBtn.addEventListener('click', () => {
     displayCategories();
 });
 
-// Initialize game on page load
-loadTriviaData();
 // Return home button with confirmation
 document.addEventListener('DOMContentLoaded', () => {
     const homeBtn = document.getElementById('home-btn');
@@ -255,3 +273,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Initialize game on page load
+loadCategories();

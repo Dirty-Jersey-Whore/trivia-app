@@ -1,0 +1,204 @@
+{
+  "questions": [
+    {
+      "id": 51,
+      "question": "Which amendment guarantees freedom of speech, religion, press, assembly, and petition?",
+      "type": "multiple_choice",
+      "options": ["1st Amendment", "2nd Amendment", "5th Amendment", "10th Amendment"],
+      "correct_answer": "1st Amendment",
+      "difficulty": "easy"
+    },
+    {
+      "id": 52,
+      "question": "Which amendment protects the right to bear arms?",
+      "type": "multiple_choice",
+      "options": ["1st Amendment", "2nd Amendment", "4th Amendment", "10th Amendment"],
+      "correct_answer": "2nd Amendment",
+      "difficulty": "easy"
+    },
+    {
+      "id": 53,
+      "question": "Which amendment protects against unreasonable searches and seizures?",
+      "type": "multiple_choice",
+      "options": ["3rd Amendment", "4th Amendment", "5th Amendment", "6th Amendment"],
+      "correct_answer": "4th Amendment",
+      "difficulty": "medium"
+    },
+    {
+      "id": 54,
+      "question": "Which amendment protects against self-incrimination and double jeopardy?",
+      "type": "multiple_choice",
+      "options": ["4th Amendment", "5th Amendment", "6th Amendment", "8th Amendment"],
+      "correct_answer": "5th Amendment",
+      "difficulty": "medium"
+    },
+    {
+      "id": 55,
+      "question": "Which amendment guarantees the right to a speedy and public trial?",
+      "type": "multiple_choice",
+      "options": ["5th Amendment", "6th Amendment", "7th Amendment", "8th Amendment"],
+      "correct_answer": "6th Amendment",
+      "difficulty": "medium"
+    },
+    {
+      "id": 56,
+      "question": "Which amendment protects against cruel and unusual punishment?",
+      "type": "multiple_choice",
+      "options": ["6th Amendment", "7th Amendment", "8th Amendment", "9th Amendment"],
+      "correct_answer": "8th Amendment",
+      "difficulty": "medium"
+    },
+    {
+      "id": 57,
+      "question": "Which amendment reserves powers to the states and the people?",
+      "type": "multiple_choice",
+      "options": ["9th Amendment", "10th Amendment", "11th Amendment", "12th Amendment"],
+      "correct_answer": "10th Amendment",
+      "difficulty": "medium"
+    },
+    {
+      "id": 58,
+      "question": "Which amendment abolished slavery?",
+      "type": "multiple_choice",
+      "options": ["12th Amendment", "13th Amendment", "14th Amendment", "15th Amendment"],
+      "correct_answer": "13th Amendment",
+      "difficulty": "easy"
+    },
+    {
+      "id": 59,
+      "question": "Which amendment guarantees equal protection under the law and defines citizenship?",
+      "type": "multiple_choice",
+      "options": ["13th Amendment", "14th Amendment", "15th Amendment", "16th Amendment"],
+      "correct_answer": "14th Amendment",
+      "difficulty": "medium"
+    },
+    {
+      "id": 60,
+      "question": "Which amendment prohibits denying the right to vote based on race?",
+      "type": "multiple_choice",
+      "options": ["13th Amendment", "14th Amendment", "15th Amendment", "19th Amendment"],
+      "correct_answer": "15th Amendment",
+      "difficulty": "easy"
+    },
+    {
+      "id": 61,
+      "question": "Which amendment established the federal income tax?",
+      "type": "multiple_choice",
+      "options": ["15th Amendment", "16th Amendment", "17th Amendment", "18th Amendment"],
+      "correct_answer": "16th Amendment",
+      "difficulty": "medium"
+    },
+    {
+      "id": 62,
+      "question": "Which amendment established the direct election of U.S. Senators?",
+      "type": "multiple_choice",
+      "options": ["16th Amendment", "17th Amendment", "18th Amendment", "19th Amendment"],
+      "correct_answer": "17th Amendment",
+      "difficulty": "hard"
+    },
+    {
+      "id": 63,
+      "question": "Which amendment established Prohibition (banned alcohol)?",
+      "type": "multiple_choice",
+      "options": ["16th Amendment", "17th Amendment", "18th Amendment", "19th Amendment"],
+      "correct_answer": "18th Amendment",
+      "difficulty": "medium"
+    },
+    {
+      "id": 64,
+      "question": "Which amendment gave women the right to vote?",
+      "type": "multiple_choice",
+      "options": ["15th Amendment", "18th Amendment", "19th Amendment", "21st Amendment"],
+      "correct_answer": "19th Amendment",
+      "difficulty": "easy"
+    },
+    {
+      "id": 65,
+      "question": "Which amendment repealed Prohibition?",
+      "type": "multiple_choice",
+      "options": ["19th Amendment", "20th Amendment", "21st Amendment", "22nd Amendment"],
+      "correct_answer": "21st Amendment",
+      "difficulty": "medium"
+    },
+    {
+      "id": 66,
+      "question": "Which amendment limits presidents to two terms?",
+      "type": "multiple_choice",
+      "options": ["20th Amendment", "21st Amendment", "22nd Amendment", "23rd Amendment"],
+      "correct_answer": "22nd Amendment",
+      "difficulty": "easy"
+    },
+    {
+      "id": 67,
+      "question": "Which amendment gave Washington D.C. electoral votes in presidential elections?",
+      "type": "multiple_choice",
+      "options": ["22nd Amendment", "23rd Amendment", "24th Amendment", "25th Amendment"],
+      "correct_answer": "23rd Amendment",
+      "difficulty": "hard"
+    },
+    {
+      "id": 68,
+      "question": "Which amendment abolished poll taxes?",
+      "type": "multiple_choice",
+      "options": ["23rd Amendment", "24th Amendment", "25th Amendment", "26th Amendment"],
+      "correct_answer": "24th Amendment",
+      "difficulty": "hard"
+    },
+    {
+      "id": 69,
+      "question": "Which amendment addresses presidential succession and disability?",
+      "type": "multiple_choice",
+      "options": ["23rd Amendment", "24th Amendment", "25th Amendment", "26th Amendment"],
+      "correct_answer": "25th Amendment",
+      "difficulty": "hard"
+    },
+    {
+      "id": 70,
+      "question": "Which amendment lowered the voting age to 18?",
+      "type": "multiple_choice",
+      "options": ["24th Amendment", "25th Amendment", "26th Amendment", "27th Amendment"],
+      "correct_answer": "26th Amendment",
+      "difficulty": "easy"
+    },
+    {
+      "id": 71,
+      "question": "How many amendments are in the Bill of Rights?",
+      "type": "multiple_choice",
+      "options": ["5", "8", "10", "12"],
+      "correct_answer": "10",
+      "difficulty": "easy"
+    },
+    {
+      "id": 72,
+      "question": "Which amendment prohibits quartering soldiers in private homes during peacetime?",
+      "type": "multiple_choice",
+      "options": ["2nd Amendment", "3rd Amendment", "4th Amendment", "5th Amendment"],
+      "correct_answer": "3rd Amendment",
+      "difficulty": "hard"
+    },
+    {
+      "id": 73,
+      "question": "Which amendment guarantees the right to a jury trial in civil cases?",
+      "type": "multiple_choice",
+      "options": ["6th Amendment", "7th Amendment", "8th Amendment", "9th Amendment"],
+      "correct_answer": "7th Amendment",
+      "difficulty": "hard"
+    },
+    {
+      "id": 74,
+      "question": "Which amendment states that rights not listed in the Constitution are still retained by the people?",
+      "type": "multiple_choice",
+      "options": ["8th Amendment", "9th Amendment", "10th Amendment", "11th Amendment"],
+      "correct_answer": "9th Amendment",
+      "difficulty": "hard"
+    },
+    {
+      "id": 75,
+      "question": "In what year was the 19th Amendment (women's suffrage) ratified?",
+      "type": "multiple_choice",
+      "options": ["1865", "1920", "1965", "1971"],
+      "correct_answer": "1920",
+      "difficulty": "medium"
+    }
+  ]
+}
